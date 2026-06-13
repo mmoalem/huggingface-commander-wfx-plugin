@@ -1,0 +1,21 @@
+; HuggingFace VFS Plugin – exported functions
+; This file tells the linker which functions to export by name (no decoration)
+
+LIBRARY HuggingFace_VFS
+
+EXPORTS
+    FsInitW
+    FsSetDefaultParams
+    FsGetDefRootName
+    FsGetBackgroundFlags
+    FsStatusInfoW
+    FsFindFirstW
+    FsFindNextW
+    FsFindClose
+    FsGetFileW
+    FsPutFileW
+    FsDeleteFileW
+    FsMkDirW
+    FsRemoveDirW
+    FsRenMovFileW
+    FsExecuteFileW

@@ -1,0 +1,5 @@
+[plugininstall]
+description=HuggingFace VFS
+type=wfx
+file=HuggingFace_VFS.wfx64
+defaultdir=HuggingFace
