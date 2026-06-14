@@ -174,3 +174,11 @@ commit history on huggingface.co.
 ## License
 
 MIT License — do whatever you like with it.
+
+---
+
+## Support
+
+If you find this project useful, consider supporting my work:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-Donate-orange?style=for-the-badge&logo=buy-me-a-coffee&logoColor=white)](https://buymeacoffee.com/mmoalem)
