@@ -55,9 +55,11 @@ HuggingFace Hub repositories — directly inside your file manager.
 
 ## Requirements
 
-- Windows 10/11 (x64)
+- **Windows 10/11 (x64)**
 - A HuggingFace account with an **access token** (read+write)
   → https://huggingface.co/settings/tokens
+
+*Note: While the WFX interface is supported by Double Commander on macOS/Linux, this binary is a Windows DLL and will not work there. Supporting other platforms would require replacing Windows-specific APIs (WinHTTP, BCrypt) and recompiling.*
 
 ---
 
