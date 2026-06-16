@@ -1,6 +1,6 @@
 # HuggingFace VFS Plugin
 
-A file system (WFX) plugin for **Free Commander**, **Total Commander**, and **Double Commander**
+A file system (WFX) plugin for **Total Commander**, **Double Commander** or any other file manager than loads wfx extensions,
 that lets you browse, download, **upload**, delete, and rename files in your
 HuggingFace Hub repositories — directly inside your file manager.
 
@@ -19,6 +19,19 @@ HuggingFace Hub repositories — directly inside your file manager.
 | Remove folders  | ✅     | ✅       |
 | Rename / Move   | ✅     | ✅       |
 | Background xfer | ✅     | ✅       |
+
+---
+
+## Download & Quick Install
+
+1. **Download the latest release:**  
+   Go to [**GitHub Releases**](https://github.com/mmoalem/HuggingFace_VFS/releases) and download the `HuggingFace_VFS.zip` file.
+   
+2. **Auto-Install (Total Commander):**  
+   Simply open the downloaded `.zip` file inside Total Commander, and it will prompt you to install the plugin automatically.
+
+3. **Manual Install:**  
+   Extract `HuggingFace_VFS.wfx64` and `pluginst.inf` to a folder (e.g., `%COMMANDER_PATH%\Plugins\wfx\HuggingFace\`) and follow the [Installation](#installation) steps below.
 
 ---
 
@@ -48,42 +61,20 @@ HuggingFace Hub repositories — directly inside your file manager.
 
 ---
 
-## Build Instructions (MSVC)
-
-### Prerequisites
-- Visual Studio 2019 or 2022 (any edition including Community — free)
-- Windows SDK 10.0 (installed with VS)
-- No external dependencies — uses only Windows built-in WinHTTP
-
-### Steps
-
-1. Open `HuggingFace_VFS.sln` in Visual Studio
-2. Select **Release | x64** configuration
-3. Build → Build Solution  (`Ctrl+Shift+B`)
-4. Output: `bin\Release\HuggingFace_VFS.wfx64`
-
-### Command-line build (Developer Command Prompt)
-```
-msbuild HuggingFace_VFS.sln /p:Configuration=Release /p:Platform=x64
-```
-
----
-
 ## Installation
 
-### Free Commander
-1. Open Free Commander
-2. Menu: **Tools → Settings → Plugins → File System Plugins**
-3. Click **Add**, navigate to `HuggingFace_VFS.wfx64`, click Open
-4. Click OK
-
-**Alternatively** — drag `pluginst.inf` onto Free Commander; it will offer to install automatically.
-
 ### Total Commander
-Same as above, under **Configuration → Options → Plugins → Configure (WFX)**.
+1. Open Total Commander
+2. Go to **Configuration → Options → Plugins**
+3. Click **Configure** under **File system plugins (.WFX)**
+4. Click **Add**, navigate to `HuggingFace_VFS.wfx64`, and click Open
+5. Click OK
 
 ### Double Commander
-Same WFX binary works unchanged. **Tools → Options → Plugins → File System plugins**.
+1. Open Double Commander
+2. Go to **Tools → Options → Plugins → File System plugins**
+3. Click **Add**, navigate to `HuggingFace_VFS.wfx64`, and click Open
+4. Click OK
 
 ---
 
@@ -168,6 +159,27 @@ commit history on huggingface.co.
 - **Private repos** are accessible as long as your token has read access
 - **Rename/Move** works by download + re-upload + delete (HF has no server-side rename)
 - **Folder delete** recursively deletes all files within (HF has no empty directories)
+
+---
+
+## Building from Source (MSVC)
+
+### Prerequisites
+- Visual Studio 2019 or 2022 (any edition including Community — free)
+- Windows SDK 10.0 (installed with VS)
+- No external dependencies — uses only Windows built-in WinHTTP
+
+### Steps
+
+1. Open `HuggingFace_VFS.sln` in Visual Studio
+2. Select **Release | x64** configuration
+3. Build → Build Solution  (`Ctrl+Shift+B`)
+4. Output: `bin\Release\HuggingFace_VFS.wfx64`
+
+### Command-line build (Developer Command Prompt)
+```
+msbuild HuggingFace_VFS.sln /p:Configuration=Release /p:Platform=x64
+```
 
 ---
 
